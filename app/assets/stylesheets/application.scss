@@ -171,7 +171,8 @@
  }
 
  #hero .btn-get-started:hover {
-   background: $link-color;
+   background: $link-hover-color;
+   text-decoration: none;
  }
 
  @media (min-width: 1024px) {
@@ -318,13 +319,13 @@
    border-radius: 3px;
    transition: 0.5s;
    margin: 10px;
-   color: $white;
+   color: $white !important;
    background: $primary-color !important;
    border: 1px solid $primary-color !important;
 }
 
 .btn-appointment:hover {
-   background: $link-color !important;
+   background: $link-hover-color !important;
 }
 
 .book-appointment {
