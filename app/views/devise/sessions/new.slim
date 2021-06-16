@@ -1,0 +1,23 @@
+main#main.authentication-page
+  .container
+    .row.justify-content-center
+      .col-md-5
+        .card
+          .card-body
+            h5.card-title.text-center Log In
+            hr
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .form-group
+                = f.label :email
+                = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control'
+
+              .form-group
+                = f.label :password
+                = f.password_field :password, autocomplete: "current-password", class: 'form-control'
+
+              .form-group
+                = f.submit "Log in", class: 'btn btn-appointment form-control'
+
+            .text-right
+              span Don't have an account?
+              = render "devise/shared/links"
