@@ -1,113 +1,17 @@
 section#appointment.portfolio.section-bg
   .container
     .section-title data-aos="fade-up"
-      h2 Portfolio
-      p Check out our beautifull portfolio
+      h2 Book an Appointment
+      p How to book a COVID-19 vaccine appointment?
     .row data-aos="fade-up" data-aos-delay="100"
-      .col-lg-12
-        ul#portfolio-flters
-          li.filter-active data-filter="*"  All
-          li data-filter=".filter-app"  App
-          li data-filter=".filter-card"  Card
-          li data-filter=".filter-web"  Web
-    .row.portfolio-container data-aos="fade-up" data-aos-delay="200"
-      .col-lg-4.col-md-6.portfolio-item.filter-app
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-1.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-1.jpg" title=("App 1")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 App 1
-            p App
-      .col-lg-4.col-md-6.portfolio-item.filter-web
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-2.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-2.jpg" title=("Web 3")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 Web 3
-            p Web
-      .col-lg-4.col-md-6.portfolio-item.filter-app
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-3.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-3.jpg" title=("App 2")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 App 2
-            p App
-      .col-lg-4.col-md-6.portfolio-item.filter-card
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-4.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-4.jpg" title=("Card 2")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 Card 2
-            p Card
-      .col-lg-4.col-md-6.portfolio-item.filter-web
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-5.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-5.jpg" title=("Web 2")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 Web 2
-            p Web
-      .col-lg-4.col-md-6.portfolio-item.filter-app
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-6.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-6.jpg" title=("App 3")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 App 3
-            p App
-      .col-lg-4.col-md-6.portfolio-item.filter-card
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-7.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-7.jpg" title=("Card 1")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 Card 1
-            p Card
-      .col-lg-4.col-md-6.portfolio-item.filter-card
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-8.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-8.jpg" title=("Card 3")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 Card 3
-            p Card
-      .col-lg-4.col-md-6.portfolio-item.filter-web
-        .portfolio-wrap
-          img.img-fluid alt="" src="assets/img/portfolio/portfolio-9.jpg" /
-          .portfolio-links
-            a.venobox data-gall="portfolioGallery" href="assets/img/portfolio/portfolio-9.jpg" title=("Web 3")
-              i.icofont-plus-circle
-            a href="portfolio-details.html" title=("More Details")
-              i.icofont-link
-          .portfolio-info
-            h4 Web 3
-            p Web
-/! End Portfolio Section
+      .col-lg-12.text-center
+        h2 Booking your appointment online or by phone through the Province
+        p.description The easiest and fastest way to book your COIVD-19 vaccine appointment is through the provincial online booking portal. You can book your vaccine appointment through the provincial phone line or online booking portal if you:
+        ul.list-unstyled
+          li are 12 years or older
+          li have a valid health card
+          li have an email address
+          li have a modern web browser
+    .row
+      .col-lg-12.text-center
+        = link_to 'Book an appointment', '#', class: 'btn btn-primary btn-appointment'       
