@@ -1,49 +1,50 @@
 section#faq.faq
   .container
-    .section-title data-aos="fade-up"
+    .section-title
       h2 F.A.Q
       p Frequently Asked Questions
-    ul.faq-list
-      li data-aos="fade-up" data-aos-delay="100"
-        a data-toggle="collapse" href="#faq1"
-          | Non consectetur a erat nam at lectus urna duis?
-          i.icofont-simple-up
-        #faq1.collapse.show data-parent=".faq-list"
-          p
-            | Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-      li data-aos="fade-up" data-aos-delay="200"
-        a.collapsed data-toggle="collapse" href="#faq2"
-          | Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-          i.icofont-simple-up
-        #faq2.collapse data-parent=".faq-list"
-          p
-            | Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-      li data-aos="fade-up" data-aos-delay="300"
-        a.collapsed data-toggle="collapse" href="#faq3"
-          | Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
-          i.icofont-simple-up
-        #faq3.collapse data-parent=".faq-list"
-          p
-            | Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-      li data-aos="fade-up" data-aos-delay="400"
-        a.collapsed data-toggle="collapse" href="#faq4"
-          | Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-          i.icofont-simple-up
-        #faq4.collapse data-parent=".faq-list"
-          p
-            | Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-      li data-aos="fade-up" data-aos-delay="500"
-        a.collapsed data-toggle="collapse" href="#faq5"
-          | Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-          i.icofont-simple-up
-        #faq5.collapse data-parent=".faq-list"
-          p
-            | Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-      li data-aos="fade-up" data-aos-delay="600"
-        a.collapsed data-toggle="collapse" href="#faq6"
-          | Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?
-          i.icofont-simple-up
-        #faq6.collapse data-parent=".faq-list"
-          p
-            | Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-/! End F.A.Q Section
+    #accordion
+      .card
+        #headingOne.card-header
+          h5.mb-0
+            button.btn.btn-link.text-dark.font-weight-bold aria-controls="collapseTwo" aria-expanded="true" data-target="#collapseOne" data-toggle="collapse"
+              | How long does protection from a COVID-19 vaccine last?
+        #collapseOne.collapse.show aria-labelledby="headingOne" data-parent="#accordion"
+          .card-body
+            | We don’t know how long protection lasts for those who are vaccinated. What we do know is that COVID-19 has caused very serious illness and death for a lot of people. If you get COVID-19, you also risk giving it to loved ones who may get very sick. Getting a COVID-19 vaccine is a safer choice.
+      .card
+        #headingTwo.card-header
+          h5.mb-0
+            button.btn.btn-link.collapsed.text-dark.font-weight-bold aria-controls="collapseTwo" aria-expanded="false" data-target="#collapseTwo" data-toggle="collapse"
+              | How many doses of COVID-19 vaccine will I need to get?
+        #collapseTwo.collapse aria-labelledby="headingTwo" data-parent="#accordion"
+          .card-body
+            | The number of doses needed depends on which vaccine you receive. To get the most protection:
+            ul#selector
+              li Two Pfizer-BioNTech vaccine doses should be given 3 weeks (21 days) apart.
+              li Two Moderna vaccine doses should be given 1 month (28 days) apart.
+              li Johnson & Johnsons Jansen (J&J/Janssen) COVID-19 vaccine requires only one dose.
+      .card
+        #headingThree.card-header
+          h5.mb-0
+            button.btn.btn-link.collapsed.text-dark.font-weight-bold aria-controls="collapseThree" aria-expanded="false" data-target="#collapseThree" data-toggle="collapse"
+              | If I have an underlying condition, can I get a COVID-19 vaccine?
+        #collapseThree.collapse aria-labelledby="headingThree" data-parent="#accordion"
+          .card-body
+            | People with underlying medical conditions can receive a COVID-19 vaccine as long as they have not had an immediate or severe allergic reaction to a COVID-19 vaccine or to any of the ingredients in the vaccine. Learn more about vaccination considerations for people with underlying medical conditions. Vaccination is an important consideration for adults of any age with certain underlying medical conditions because they are at increased risk for severe illness from COVID-19.
+      .card
+        #headingFour.card-header
+          h5.mb-0
+            button.btn.btn-link.collapsed.text-dark.font-weight-bold aria-controls="collapseThree" aria-expanded="false" data-target="#collapseFour" data-toggle="collapse"
+              | Can I get vaccinated against COVID-19 while I am currently sick with COVID-19?
+        #collapseFour.collapse aria-labelledby="headingFour" data-parent="#accordion"
+          .card-body
+            | No. People with COVID-19 who have symptoms should wait to be vaccinated until they have recovered from their illness and have met the criteria for discontinuing isolation; those without symptoms should also wait until they meet the criteria before getting vaccinated. This guidance also applies to people who get COVID-19 before getting their second dose of vaccine.
+      .card
+        #headingFive.card-header
+          h5.mb-0
+            button.btn.btn-link.collapsed.text-dark.font-weight-bold aria-controls="collapseThree" aria-expanded="false" data-target="#collapseFive" data-toggle="collapse"
+              | Who should be vaccinated first for COVID-19 vaccine?
+        #collapseFive.collapse aria-labelledby="headingFive" data-parent="#accordion"
+          .card-body
+            | While COVID-19 vaccine supplies are limited, health workers at high risk of exposure and older people should be prioritized for vaccination.
