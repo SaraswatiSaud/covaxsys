@@ -2,8 +2,10 @@
 
 # Patients Controller Class
 class PatientsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @patients = current_user.patients.order('created_at DESC')
+    @patient = current_user.patients.first
   end
 
   def new
@@ -12,10 +14,12 @@ class PatientsController < ApplicationController
 
   def create
     @patient = current_user.patients.new(patient_params)
-    if @patient.save
-      redirect_to patients_path
-    else
-      render 'new'
+    if current_user.patients.count == 0
+      if @patient.save
+        redirect_to patients_path
+      else
+        render 'new'
+      end
     end
   end
 
