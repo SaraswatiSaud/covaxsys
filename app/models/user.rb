@@ -5,4 +5,5 @@ class User < ApplicationRecord
           :rememberable, :validatable
 
   enum role: %i[patient admin]
+  has_many :patients
 end

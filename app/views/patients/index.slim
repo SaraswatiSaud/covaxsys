@@ -1,0 +1,24 @@
+main#main
+  = render 'shared/sidebar'
+
+  .main    
+    - if @patients.empty?
+      p No information about patient has been added.
+    - else
+
+      h3.mb-2 Patient Information
+      - @patients.each do |patient|
+        dl.row.mt-4
+          dt.col-sm-3 Name:
+          dd.col-sm-9= patient.name
+          dt.col-sm-3 Age:
+          dd.col-sm-9= patient.age
+          dt.col-sm-3 Address:
+          dd.col-sm-9= patient.address
+          dt.col-sm-3 Contact Number:
+          dd.col-sm-9= patient.contact_number
+          dt.col-sm-3 Current medications:
+          dd.col-sm-9= patient.current_medications
+          dt.col-sm-3 Additional Information:
+          dd.col-sm-9= patient.additional_info
+        = link_to 'Edit patient details', edit_patient_path(patient.id)
