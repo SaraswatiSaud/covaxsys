@@ -2,8 +2,8 @@
 
 # Rails routes
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'homepage#index'
+  devise_for :users, controller: { registrations: 'users/registrations' }
+  root to: 'dashboards#index'
 
   resources :dashboards
   resources :patients

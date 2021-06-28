@@ -2,15 +2,14 @@ header#header.fixed-top
   .container-fluid.d-flex
     .logo.mr-auto
       h1.text-light
-        = link_to 'COVAXSYS', root_path
+        = link_to 'MESSAGE PLATFORM', root_path
     nav.nav-menu.d-none.d-lg-block
       ul
         li
-          a href="#services"  Services
-        li
-          a href="#appointment"  Book an appointment
-        li
-          a href="#faq" FAQ
+          - if user_signed_in?
+            a.font-italic
+              span Logged in by
+              span.pl-1.font-weight-bold= current_user.name
         li.get-started
           - if user_signed_in?
             = link_to 'Logout', destroy_user_session_path, method: :delete

@@ -3,7 +3,4 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
           :rememberable, :validatable
-
-  enum role: %i[patient admin]
-  has_many :patients
 end
