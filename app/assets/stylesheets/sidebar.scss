@@ -1,0 +1,72 @@
+@import 'variable';
+
+.sidenav {
+ height: 100%;
+ width: 300px;
+ position: fixed;
+ // z-index: 1;
+ left: 0;
+ background-color: $primary-color;
+ overflow-x: scroll;
+ padding-top: 20px;
+}
+
+.sidenav a {
+ padding: 6px 8px 6px 30px;
+ text-decoration: none;
+ color: $white;
+ display: block;
+}
+
+.sidenav a:hover {
+ color: #f1f1f1;
+ text-decoration: none;
+}
+
+.chat-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.img-status {
+  position: relative;
+  display: inline-block;
+}
+
+.pl-15 {
+  padding-left: 15px !important;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.font-w600 {
+  font-weight: 600 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.font-size-xs {
+  font-size: .857143rem !important;
+}
+
+.main {
+ margin-left: 300px;
+ padding: 20px 20px;
+}
+
+@media screen and (max-height: 450px) {
+ .sidenav {padding-top: 15px;}
+ .sidenav a {font-size: 18px;}
+}

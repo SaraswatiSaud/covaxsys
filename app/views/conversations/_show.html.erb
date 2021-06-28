@@ -1,0 +1,22 @@
+<% if @messages.nil? %>
+  <p>Start Conversation</p>
+<% end %>
+
+<div id="conversation-messages">
+  <%= turbo_stream_from "messages" %>
+
+  <%= turbo_frame_tag "messages" do %>
+    <%= render @messages %>
+  <% end %>
+</div>
+
+<div class="chat-form">
+  <%= turbo_frame_tag "message_form" do %>
+    <%= form_with(model: [@conversation, @conversation.messages.build], data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }, id: dom_id(@message)) do |form| %>
+      <div class="d-flex align-items-center">
+        <%= form.text_area :body, placeholder: 'Type your message content here', class: "form-control flex-grow mr-5" %>
+        <%= form.submit class: "btn btn-success", data: { disable_with: false } %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

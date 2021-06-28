@@ -1,0 +1,18 @@
+main#main
+  .sidenav
+    .d-flex.flex-column
+      ul.chat-list
+        - @other_users.each do |user|
+          li.chat-list-item
+            .mr-10.pl-15
+              a.img-link.img-status href="#"
+                = image_tag("default.png", width: '40px', height: '40px')
+            div
+              = link_to user.name, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post, remote: true, class: 'font-w600'
+
+              .font-size-xs.text-muted
+                p Hello There
+
+  .main
+    .d-flex.flex-column
+      #content_area

@@ -1,0 +1,76 @@
+<main id="main-container">
+  <div class="row">
+    <div class="col-md-3 border-right border-bottom">
+      <div class="row d-flex flex-column">
+        <div class="p-15 d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <i class="fa fa-share pl-4"></i>
+            <a class="ml-2" href="#">New Chat</a>
+          </div>
+          <div class="ml-20">
+            <button type="button" class="btn">
+              <i class="fa fa-search"></i>
+              <a class="ml-2" href="#">Search</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-9 border-bottom">
+      <div class="row d-flex flex-column">
+        <div class="p-15 d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <a class="ml-20" href="#">Inbox</a>
+            <a class="ml-20" href="#">Texts</a>
+            <a class="ml-20" href="#">Flagged</a>
+          </div>
+          <div class="ml-20">
+            <button type="button" class="btn">
+              <i class="fa fa-phone"></i>
+            </button>
+            <button type="button" class="btn">
+              <i class="fa fa-comment"></i>
+            </button>
+            <button type="button" class="btn">
+              <i class="fa fa-envelope"></i>
+            </button>
+            <button type="button" class="btn">
+              <i class="fa fa-share"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="chat-section" class="row border-bottom">
+    <div class="col-md-3 border-right chat-contacts">
+      <div class="row d-flex flex-column">
+        <ul class="chat-list">
+          <% @other_users.each do |user| %>
+            <li class="chat-list-item">
+              <div class="mr-10 pl-15">
+                <a class="img-link img-status" href="#">
+                  <%= image_tag("default.png", class: "img-avatar", width: '40px', height: '40px') %>
+                </a>
+              </div>
+              <div>
+                <%= link_to user.name, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post, remote: true, class: "font-w600" %>
+                <div class="font-size-xs text-muted">
+                  <!-- Hello there! -->
+                </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9 d-flex flex-column">
+      <!-- <div class="row d-flex flex-column"> -->
+        <div id="content_area" class="p-15 flex-grow-1 text-wrap-break-word overflow-y-auto"></div>
+      <!-- </div> -->
+    </div>
+  </div>
+</main>

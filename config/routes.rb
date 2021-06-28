@@ -2,12 +2,11 @@
 
 # Rails routes
 Rails.application.routes.draw do
-  devise_for :users, controller: { registrations: 'users/registrations' }
-  root to: 'dashboards#index'
+  devise_for :users
+  root to: 'conversations#index'
 
   resources :dashboards
-  resources :patients
-  resources :appointments do
-    post 'update_patient', on: :member
+  resources :conversations do
+    resources :messages
   end
 end

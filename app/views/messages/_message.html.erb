@@ -1,0 +1,8 @@
+<%= turbo_frame_tag dom_id(message) do %>
+  <div class="mx-10">
+    <p>
+      <span class="text-primary mr-4"><%= User.find(message.user_id).name %></span>
+      <span><%= message.body %></span>
+    </p>
+  </div>
+<% end %>
