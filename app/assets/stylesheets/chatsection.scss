@@ -1,0 +1,23 @@
+@import 'variable';
+
+.chat-form {
+  position: fixed;
+  bottom: 15px;
+  width: 70%;
+}
+
+#conversation-messages {
+  height: 74vh;
+  position: fixed;
+  background: $bg-color;
+  top: 72px;
+  left: 250px;
+  width: 100%;
+  border-bottom: 1px solid $bg-border-color;
+  padding: 20px 40px;
+  overflow: scroll;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
