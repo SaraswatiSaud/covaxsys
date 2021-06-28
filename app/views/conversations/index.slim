@@ -8,10 +8,7 @@ main#main
               a.img-link.img-status href="#"
                 = image_tag("default.png", width: '40px', height: '40px')
             div
-              = link_to user.name, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post, remote: true, class: 'font-w600'
-
-              .font-size-xs.text-muted
-                p Hello There
+              = link_to user.name, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post, remote: true, class: 'font-w600'              
 
   .main
     .d-flex.flex-column

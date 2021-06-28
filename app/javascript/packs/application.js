@@ -11,8 +11,11 @@ import "channels"
 import "bootstrap"
 import "../stylesheets/application"
 
-document.addEventListener("turbolinks:load", function() {
+require("@hotwired/turbo")
+
+document.addEventListener("turbo:load", function() {
   $(function () {
+    console.log("turbo!")
     $('[data-toggle="tooltip"]').tooltip()
     $('[data-toggle="popover"]').popover()
   })
